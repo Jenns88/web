@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Estudio de diseño web Jenns</title>
+		<link rel="icon" type="image/png" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+		<meta name="author" content="Jennifer Sanchez">
+		<meta name="keywords" content="frontend, wordpress, web, grafico, diseño">
+		<meta name="description" content="Diseñadora web y grafica">
+		<meta property="og:image" content="img/miniatura.png">
+				<!-- <Tailwinds CSS -->
+		<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+		<!-- Normalizados de CSS para todos los navegadores -->
+		
+		<!-- <Tipografias -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">   
+		<!-- Mis estilos CSS -->       
+		<link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+		<link href="css/tablet.css" rel="stylesheet" media="all and (min-width: 601px) and (max-width: 1199px)">
+		<link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 1200px)">
+		<!-- Iconos Fontawesome -->
+		<script src="https://kit.fontawesome.com/81e05938a6.js"></script>
+		<!-- Animaciones -->
+		<script src="js/headroom.min.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">		
+		<!-- Javascript -->
+		<script src="js/headroom.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>		
+	</head>
+	<!-- Body -->
+	<body>  
+	<!-- Código suavizar ancla -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	/////////////////////////////////////////////////////////////////
+	// Animate scroll
+	/////////////////////////////////////////////////////////////////
+	$(function() {
+		$('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+			location.hostname == this.hostname) {
+			var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+		<!-- Header (nav: logo + menú) -->
+		<header class="headroom fixed top-0 left-0 right-0 h-20 bg-purple-900 z-40">
+			<nav class="container mx-auto flex md:justify-around items-center justify-center">				
+				<a href="#"><img src="img/logoblanco.png"></a>
+				<!-- Menú versión móvil hamburguesa -->
+				<!------- Botón abrir ------->
+				<button onclick="document.querySelector('#collapse').classList.toggle('hidden')" class="sm:hidden">
+					<i class="fas fa-bars text-white text-2xl ml-48"></i>
+				</button>
+				<!------- Botón cerrar ------->
+				<nav id="collapse" class="fixed inset-0 bg-indigo-700 h-screen sm:h-20 md:h-20 lg:h-20 sm:bg-transparent hidden sm:static sm:block">
+				<p class="text-right sm:hidden">
+				<button onclick="document.querySelector('#collapse').classList.toggle('hidden')">
+					<i class="fas fa-times text-white text-2xl p-6"></i>
+				</button>
+				</p>
+				<div class="md:ml-64">
+					<ul class="sm:flex text-2xl text-white mt-20 sm:mt-auto lg:mt-auto">
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#porfolio">porfolio</a>
+						</li>
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#tarifas">tarifas</a>
+						</li>
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#quien">quién soy</a>
+						</li>
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#contacto">contacto</a>
+						</li>
+					</ul>
+				</div>								
+			</nav>
+		</header>
+		<!-- Fin Header -->
+		<!-- Portada -->
+		<section class="flex justify-center items-center mx-auto h-screen bg-purple-900 text-white">
+			<div class="flex flex-col items-center text-center justify-center mt-20">
+				<div class="text-sm md:text-lg tracking-widest uppercase"><h2>Estudio de diseño gráfico & web</h2></div>
+				<div class="text-5xl w-1/2 sm:w-auto md:w-full font-bold mt-10"><h1 class="gigante"><span class="color-verde">Páginas web</span><p> y servicios digitales</p></h1></div>
+				<div class="mt-20"><img class="ani-flecha" src="img/download.png"></div>
+		</section>
+		<!-- Sección porfolio -->
+		<a name="porfolio"></a> 
+		<section class="porfolio"> 
+				<div class="mx-8 flex flex-col items-center mt-20">
+					<h1 class="absolute z-10 mt-8 lg:mt-10 font-bold text-2xl text-purple-900 tracking-widest">Echa un vistazo</h1>
+					<h2 class="gigante text-6xl relative uppercase text-gray-300 md:tracking-widest font-bold">porfolio</h2>
+					<p class="text-gray-800 my-10 sm:text-lg md:text-xl lg:text-xl text-center">Te presento una pequeña selección de algunos de los proyectos de diseño gráfico, diseño web y apps.</p>
+				</div>
+				<div class="mx-auto">
+					<div class="flex justify-around mt-8 md:mx-64">
+						<div class="text-black font-bold underline text-center md:ml-48 hover:text-blue-500">Todos</div>
+						<div class="text-gray-600 text-center hover:text-blue-500">Páginas web</div>
+						<div class="text-gray-600 text-center hover:text-blue-500">Diseño gráfico</div>
+						<div class="text-gray-600 text-center md:mr-48 hover:text-blue-500">Apps</div>
+					</div>
+					<div class="mx-auto flex flex-wrap justify-around mt-10 md:mb-0">
+						<a href="proyecto1.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto1.jpg" alt="proyecto_grafico"></div></a>
+						<a href="proyecto2.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto2.jpg" alt="proyecto_grafico"></div></a>
+						<a href="proyecto3.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto3.jpg" alt="proyecto_grafico"></div></a>
+						<a href="proyecto4.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto4.jpg" alt="proyecto_grafico"></div></a>
+						<a href="proyecto5.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto5.jpg" alt="proyecto_grafico"></div></a>
+						<a href="proyecto6.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto6.png" alt="proyecto_grafico"></div></a>
+						<a href="proyecto7.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto7.png" alt="proyecto_grafico"></div></a>
+						<a href="proyecto8.html"><div data-aos="zoom-in"><img class="marmota hover:shadow-lg" src="img/proyectos/proyecto8.jpg" alt="proyecto_grafico"></div></a>
+					</div>
+				</div>							
+		</section>
+		<!-- Sección tarifas -->
+		<a name="tarifas"></a> 
+		<section class=""> 
+			<div class="mx-8 flex flex-col items-center mt-20">
+				<h1 class="absolute z-10 mt-8 md:mt-10 font-bold text-2xl text-purple-900 tracking-widest">Todo tiene un precio</h1>
+				<h2 class="gigante text-6xl relative uppercase text-gray-300 font-bold md:tracking-widest">tarifas</h2>
+				<p class="text-gray-800 mt-10 sm:text-lg md:text-xl lg:text-xl text-center">Cuento con unas tarifas de precios adaptadas a las necesidades más comunes del cliente.</p>
+				<p class="text-gray-800 mb-16 sm:text-lg md:text-xl lg:text-xl text-center">Los precios están actualizados a fecha de 10 de Marzo de 2020.</p>
+			</div>
+			<!-- Tabla de tarifas -->
+			<div class="mx-auto">
+				<div class="mx-auto flex flex-wrap justify-center mt-10">
+					<!-- Tarifa 1 -->
+					<div class="imgtarifa flex flex-col items-center mb-16 mx-4 border-2 border-gray-400 hover:bg-gray-200 hover:border-purple-700">
+						<img class="-mt-10" src="img/tarifa1.png">
+						<div class="my-5 text-center"><p class="font-bold text-xl">Pack PLATA</p><ul class="mt-5 text-gray-700"><li>Diseño de plantilla</li><li class="mt-1">Adaptado a móvil</li><li class="mt-1">Sin programación</li><li class="mt-1">SEO Básico</li></ul>
+						<p class="text-sm mt-6">A partir de</p><button class="text-white py-2 px-10 bg-gray-400 font-bold text-2xl mt-3 hover:bg-purple-900">consultar</button><p class="text-sm mt-3">+ IVA</p></div>
+					</div>
+					<!-- Tarifa 2 -->
+					<div class="imgtarifa flex flex-col items-center mb-16 mx-4 border-2 border-gray-400 hover:bg-gray-200 hover:border-purple-700">
+						<img class="-mt-10" src="img/tarifa2.png">
+						<div class="my-5 text-center"><p class="font-bold text-xl">Pack ORO</p><ul class="mt-5 text-gray-700"><li>Diseño personalizado</li><li class="mt-1">Adaptado a móvil</li><li class="mt-1">Con programación</li><li class="mt-1">SEO Avanzado</li></ul>
+						<p class="text-sm mt-6">A partir de</p><button class="text-white py-2 px-10 bg-gray-400 font-bold text-2xl mt-3 hover:bg-purple-900">consultar</button><p class="text-sm mt-3">+ IVA</p></div>
+					</div>
+					<!-- Tarifa 3 -->
+					<div class="imgtarifa flex flex-col items-center mx-4 border-2 border-gray-400 hover:bg-gray-200 hover:border-purple-700">
+						<img class="-mt-10" src="img/tarifa3.png">
+						<div class="my-5 text-center"><p class="font-bold text-xl">Pack APP</p><ul class="mt-5 text-gray-700"><li>Diseño personalizado</li><li class="mt-1">Android</li><li class="mt-1">iOS</li><li class="mt-1">Publicación en tiendas</li></ul>
+						<p class="text-sm mt-6">A partir de</p><button class="text-white py-2 px-10 bg-gray-400 font-bold text-2xl mt-3 hover:bg-purple-900">consultar</button><p class="text-sm mt-3">+ IVA</p></div>
+					</div>
+				</div>
+			<!-- Fín tabla de tarifas -->
+				<p class="mx-8 text-gray-800 mb-32 text-sm italic mt-8 text-center">* Consúltanos y te haremos un precio adaptado a tus necesidades. Todos los precios son SIN IVA.</p>
+			</div>							
+		</section>
+		<!-- Sección quién soy -->
+		<a name="quien"></a> 
+		<section class="presentacion"> 
+			<div class="mx-auto flex flex-col items-center mt-20">
+				<h1 class="absolute z-10 mt-4 font-bold text-2xl text-purple-900 tracking-widest">Pónme cara</h1>
+				<h2 class="text-6xl relative uppercase text-gray-300 text-center font-bold leading-none md:tracking-widest">quién soy</h2>
+			</div>
+			<div class="md:flex lg:flex mx-8 justify-center mt-16">
+				<div data-aos="zoom-in" data-aos-delay="300" data-aos-easing="ease-in" class="mx-auto md:ml-40 w-64 md:w-1/3 md:z-10">
+					<img src="img/cara.jpg">
+				</div>
+				<div class="mt-10 md:mr-40 md:w-1/3 md:text-left text-center">
+					<h3 class="font-bold text-2xl">Quién soy</h3>
+					<p class="mt-6 text-gray-800 sm:text-lg md:text-xl lg:text-xl">Hola, soy Jénnifer diseñadora gráfica y desarrolladora web Fron-End. Ayudo a	empresas a lanzar proyectos digitales de manera funcional y profesional.</p>
+					<p class="mt-4 text-gray-800 sm:text-lg md:text-xl lg:text-xl mb-16">Realizo el diseño con el que interactúan sus clientes y escribo el código que la hace funcionar.</p>
+					<a class="uppercase font-bold text-purple-900 border-2 mx-auto px-8 py-2 border-purple-900 hover:bg-gray-300 hover:text-gray-600" href="#porfolio">ver porfolio</a>
+				</div>
+			</div>
+			<!-- segundo -->
+			<section class="bg-gray-200 md:-mt-16 mt-10 pb-10">
+			<div class="md:flex lg:flex items-center mx-8 justify-center">
+				<div class="md:ml-40 md:w-1/3 md:text-left text-center md:pt-32 pt-10">
+					<h3 class="font-bold text-2xl">¿Cómo lo hago?</h3>
+					<p class="mt-6 text-gray-800 sm:text-lg md:text-xl lg:text-xl">Uso herramientas de actualidad para facilitar el rendimiento de trabajo. HTML5, CSS3 y JavaScript son mis herramientas principales para gestionar un producto personalizado.</p>
+					<p class="mt-4 text-gray-800 sm:text-lg md:text-xl lg:text-xl mb-16">Además, cuento con la ayuda de Frameworks como: Boostrap, Tailwind y CMS como	WordPress o PrestaShop.</p>
+				</div>
+				<div class="mx-auto md:w-1/3 md:z-10 mt-10">
+					<div class="font-bold text-center text-teal-500 text-xl lg:text-2xl md:text-2xl">
+						<p class="mb-6 color-verde">HTML5 y CSS3</p>
+						<p class="mb-6 color-verde">WordPress</p>
+						<p class="mb-6 color-verde">JavaScript</p>
+						<p class="mb-6 color-verde">Apps nativas</p>
+					</div>
+				</div>
+			</div>				
+			</section>	
+		</section>
+		<!-- Sección contacto -->	
+		<a name="contacto"></a> 
+		<section class="contacto"> 
+			<div class="mx-8 flex flex-col items-center mt-16">
+				<h1 class="absolute z-10 mt-8 md:mt-10 font-bold text-2xl text-purple-900 tracking-widest">¿Hablamos?</h1>
+				<h2 class="gigante text-6xl relative uppercase text-gray-300 font-bold md:tracking-widest">contacto</h2>
+				<p class="text-gray-800 mt-10 sm:text-lg md:text-xl lg:text-xl text-center">Pónte en contacto si deseas obtener más información o para concertar una cita.</p>
+				<p class="text-gray-800 sm:text-lg md:text-xl lg:text-xl text-center">Indícame un teléfono de contacto o e-mail y te llamaré a la mayor brevedad posible.</p>
+			</div>
+			<div class="formulario mb-20 md:mx-64">
+				<form class="container md:mx-auto w-full">
+					<div class="flex flex-wrap mb-6 mt-16">
+					  <div class="w-full md:w-1/2 px-8 mb-6 md:mb-0">
+						<input class="appearance-none block w-full rounded text-purple-900 border-dotted  border-2 border-gray-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-purple-900 focus:bg-gray-200" id="nombre" type="text" placeholder="nombre">
+					  </div>
+					  <div class="w-full md:w-1/2 px-8 mb-6">
+						<input class="appearance-none block w-full rounded text-purple-900 border-dotted border-2 border-gray-600 py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-purple-900 focus:bg-gray-200" id="email" type="text" placeholder="e-mail">
+					  </div>
+					<div class="w-full px-8">
+						<input class="appearance-none block w-full rounded text-purple-900 border-dotted border-2 border-gray-600 py-8 px-4 leading-tight focus:outline-none focus:bg-white focus:border-purple-900 focus:bg-gray-200" id="mensaje" type="text" placeholder="mensaje">
+					</div>
+					<a class="uppercase font-bold text-purple-900 border-2 mx-auto mt-10 px-8 py-2 border-purple-900 hover:bg-gray-300 hover:text-gray-600" href="mailto:jenny_kira@.com">Enviar</a>
+				</div>
+				</form>
+			</div>
+		</section>
+		<!-- Footer -->	
+		<footer class="bg-black items-center w-full h-24">
+			<div class="container mx-auto flex justify-center pt-6 flex-col text-center">
+				<p class="text-gray-600 mx-10">© 2020 Estudio Jenns | Estudio de diseño web en Valencia</p>
+				<p class="text-gray-800 text-xs">Política de Privacidad - Aviso Legal - Política de Cookies</p>
+			</div>
+		</footer>
+	</main>
+	<script>
+        var myElement = document.querySelector("header");
+        // construct an instance of Headroom, passing the element
+        var headroom  = new Headroom(myElement);
+        // initialise
+        headroom.init();   
+	</script>
+	<script>
+		AOS.init();
+	  </script>
+	</body>

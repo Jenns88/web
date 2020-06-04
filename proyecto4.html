@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8" />
+		<title>Estudio de diseño web Jenns</title>
+		<link rel="icon" type="image/png" href="favicon.png">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+		<meta name="author" content="Jennifer Sanchez">
+		<meta name="keywords" content="frontend, wordpress, web, grafico, diseño">
+		<meta name="description" content="Diseñadora web y grafica">
+		<meta property="og:image" content="img/miniatura.png">
+				<!-- <Tailwinds CSS -->
+		<link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+		<!-- Normalizados de CSS para todos los navegadores -->
+		
+		<!-- <Tipografias -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">   
+		<!-- Mis estilos CSS -->       
+		<link href="css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+		<link href="css/tablet.css" rel="stylesheet" media="all and (min-width: 601px) and (max-width: 1199px)">
+		<link href="css/desktop.css" rel="stylesheet" media="all and (min-width: 1200px)">
+		<!-- Iconos Fontawesome -->
+		<script src="https://kit.fontawesome.com/81e05938a6.js"></script>
+		<!-- Animaciones -->
+		<script src="js/headroom.min.js"></script>
+		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+		<!-- Javascript -->
+		<script src="js/headroom.min.js"></script>
+		<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>		
+	</head>
+	<!-- Body -->
+	<body>  
+	<!-- Código suavizar ancla -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script>
+	/////////////////////////////////////////////////////////////////
+	// Animate scroll
+	/////////////////////////////////////////////////////////////////
+	$(function() {
+		$('a[href*="#"]:not([href="#"])').click(function() {
+			if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+			location.hostname == this.hostname) {
+			var target = $(this.hash);
+				target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+				if (target.length) {
+					$('html, body').animate({
+						scrollTop: target.offset().top
+					}, 1000);
+					return false;
+				}
+			}
+		});
+	});
+	</script>
+		<!-- Header (nav: logo + menú) -->
+		<header class="headroom fixed top-0 left-0 right-0 bg-purple-900 h-20 z-40">
+			<nav class="container mx-auto flex md:justify-around items-center justify-center">				
+				<a href="index.html"><img src="img/logoblanco.png"></a>
+				<!-- Menú versión móvil hamburguesa -->
+				<!------- Botón abrir ------->
+				<button onclick="document.querySelector('#collapse').classList.toggle('hidden')" class="sm:hidden">
+					<i class="fas fa-bars text-white text-2xl ml-48"></i>
+				</button>
+				<!------- Botón cerrar ------->
+				<nav id="collapse" class="fixed inset-0 bg-indigo-700 h-screen sm:h-20 md:h-20 lg:h-20 xl:h-20 sm:bg-transparent hidden sm:static sm:block">
+				<p class="text-right sm:hidden">
+				<button onclick="document.querySelector('#collapse').classList.toggle('hidden')">
+					<i class="fas fa-times text-white text-2xl p-6"></i>
+				</button>
+				</p>
+				<div class="xl:ml-64">
+					<ul class="sm:flex text-2xl text-white mt-20 sm:mt-auto lg:mt-auto">
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#porfolio">porfolio</a>
+						</li>
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#tarifas">tarifas</a>
+						</li>
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#quien">quién soy</a>
+						</li>
+						<li class="text-center">
+							<a class="block p-5 font-bold" href="#contacto">contacto</a>
+						</li>
+					</ul>
+				</div>								
+			</nav>
+		</header>
+		<main>
+		<!-- Fin Header -->
+		<!-- Proyecto 4 -->	
+		<section class="presentacion w-full"> 
+			<div class="flex flex-col mx-auto mt-20 w-full">
+				<div class="">
+					<img src="img/proyectos/proyecto4.jpg" alt="proyecto_pasteleria">
+				</div>
+				<div class="md:flex md:align-items md:justify-center my-10 md:mr-40 text-left">
+					<div class="md:w-2/4">
+						<h3 class="font-bold text-2xl">Logotipo</h3>
+						<p class="italic text-xl text-pink-700">Pastelería de alta costura</p>
+						<p class="mt-6 text-gray-800 sm:text-lg md:text-xl lg:text-xl">Proyecto ficticio de la identidad visual corporativa de la empresa de servicios "MarDulde" Cake Designer ciudad.</p>
+						<p class="mt-4 text-gray-800 sm:text-lg md:text-xl lg:text-xl mb-10">El objetivo es transmitir los valores de la empresa, exclusividad, elegancia, diseño, delicadeza, detalle...</p>
+					</div>
+					<div class="md:ml-20">
+						<h3 class="font-bold text-xl">Cliente</h3>
+						<p class="text-pink-700 mb-12">Mar Dulce</p>
+						<a class="font-bold text-pink-700 mx-auto hover:bg-gray-300 hover:text-gray-600" href="index.html">&laquo volver</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Footer -->	
+		<footer class="bg-black items-center w-full h-24">
+			<div class="container mx-auto flex justify-center pt-6 flex-col text-center">
+				<p class="text-gray-600 mx-10">© 2020 Estudio Jenns | Estudio de diseño web en Valencia</p>
+				<p class="text-gray-800 text-xs">Política de Privacidad - Aviso Legal - Política de Cookies</p>
+			</div>
+		</footer>
+	</main>
+	<script>
+        var myElement = document.querySelector("header");
+        // construct an instance of Headroom, passing the element
+        var headroom  = new Headroom(myElement);
+        // initialise
+        headroom.init();   
+	</script>
+	<script>
+		AOS.init();
+	  </script>
+	</body>

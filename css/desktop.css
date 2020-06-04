@@ -1,0 +1,90 @@
+a {
+  text-decoration: none; }
+  a:hover {
+    color: #0BDEBB; }
+
+li a {
+  text-decoration: none;
+  position: relative; }
+
+li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0.7rem;
+  left: 1.3rem;
+  width: 0%;
+  border-bottom: 0.4rem solid #0BDEBB;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s; }
+
+li a:hover:after {
+  width: 70%; }
+
+.color-verde {
+  color: #0BDEBB; }
+
+.ani-flecha {
+  -webkit-animation-name: ani-flecha;
+  animation-name: ani-flecha;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate; }
+
+@-webkit-keyframes ani-flecha {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
+
+@keyframes ani-flecha {
+  0% {
+    -webkit-transform: translateY(-20px);
+    transform: translateY(-20px); }
+  100% {
+    -webkit-transform: translateY(20px);
+    transform: translateY(20px); } }
+
+.imgtarifa {
+  width: 19.5rem;
+  height: 23rem; }
+
+.headroom {
+  will-change: transform;
+  -webkit-transition: -webkit-transform 200ms linear;
+  transition: -webkit-transform 200ms linear;
+  -o-transition: transform 200ms linear;
+  transition: transform 200ms linear;
+  transition: transform 200ms linear, -webkit-transform 200ms linear; }
+
+.headroom--pinned {
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%); }
+
+.headroom--unpinned {
+  -webkit-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  transform: translateY(-100%); }
+
+.main.hidden-main {
+  -webkit-transform: scale(0.8) translateX(20%);
+  -ms-transform: scale(0.8) translateX(20%);
+  transform: scale(0.8) translateX(20%); }
+
+.marmota {
+  width: 18rem;
+  height: 18rem;
+  -o-object-fit: cover;
+  object-fit: cover;
+  margin-bottom: 2rem; }
+
+.gigante {
+  font-size: 5rem; }
